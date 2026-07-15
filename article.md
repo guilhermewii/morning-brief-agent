@@ -1,4 +1,3 @@
-
 # Weekend Agent Challenge: Morning Brief Agent
 
 ## Resumo
@@ -13,6 +12,7 @@ Morning Brief Agent é um agente serverless que gera um resumo matinal com previ
 ## Fluxo
 1. EventBridge dispara a Lambda diariamente às 09:00 UTC.  
 2. Lambda gera o texto do briefing e grava `morning_brief_YYYYMMDD.txt` no bucket S3.  
+3. (Opcional) Lambda envia e‑mail se variáveis `EMAIL_FROM` e `EMAIL_TO` estiverem configuradas.
 
 ## Como testar
 - Na console Lambda, clique **Test** para executar manualmente.  
