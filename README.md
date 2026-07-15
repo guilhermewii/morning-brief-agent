@@ -11,12 +11,16 @@ Agente serverless que gera um resumo matinal (previsão, manchetes, agenda e mot
 
 **Variáveis de ambiente (Lambda)**
 - **BUCKET_NAME** — nome do bucket S3 (ex.: `meu-morning-brief-guilherme-2026`)
+- **EMAIL_FROM** — (opcional) endereço remetente para envio por e‑mail
+- **EMAIL_TO** — (opcional) endereço destinatário para envio por e‑mail
+- **REGION** — (opcional) região AWS; padrão `us-east-1`
 
 **Permissões necessárias (mínimo)**
 - `AWSLambdaBasicExecutionRole` (CloudWatch Logs)
 - Permissão S3 restrita:
   - `s3:PutObject` em `arn:aws:s3:::meu-morning-brief-guilherme-2026/*`
   - `s3:ListBucket` em `arn:aws:s3:::meu-morning-brief-guilherme-2026`
+- (Opcional) Permissões SES se for enviar e‑mail: `ses:SendEmail`, `ses:SendRawEmail`
 
 **Deploy rápido (console)**
 1. Criar bucket S3 `meu-morning-brief-guilherme-2026`.  
