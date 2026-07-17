@@ -34,4 +34,4 @@ Inclua os screenshots no repositório em `evidencias/`:
 - Automatizar deploy com IaC (CloudFormation / CDK / Terraform).  
 
 ## Link do repositório
-Cole aqui o link do seu GitHub após criar o repo.
+(https://github.com/guilhermewii/morning-brief-agent)
